@@ -41,6 +41,10 @@ export PS1
 # ignores duplicates in history
 export HISTCONTROL=ignoredups
 
+# install brew
+ 
+[[ -f /usr/local/bin/brew ]] || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+
 # for autojump command (j)
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
