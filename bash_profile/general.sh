@@ -1,7 +1,7 @@
 PATH="~/Library/Haskell/bin:/Library/Haskell/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
-PATH=/Users/skensell/anaconda/bin:$PATH
-PATH=:/Users/skensell/bin:$PATH
+PATH=/$HOME/anaconda/bin:$PATH
+PATH=:$HOME/bin:$PATH
 export PATH
 
 export CLICOLOR=1
