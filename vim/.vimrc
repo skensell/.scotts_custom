@@ -44,7 +44,7 @@
     set encoding=utf-8
     set fileencoding=utf-8
     set noexrc " don't use local version of .(g)vimrc, .exrc
-    set clipboard+=unnamed " share system clipboard
+    " set clipboard+=unnamed " share system clipboard
     set showcmd " display incomplete commands
     set hidden " allow switching buffers without saving changes to file
     set noerrorbells " don't make beep noises
@@ -83,7 +83,8 @@
     Bundle 'sjl/gundo.vim'
     Bundle 'LargeFile'
     Bundle 'Lokaltog/vim-powerline'
-    Bundle 'lambdatoast/elm.vim'
+    
+    " Text objects
     " ae is a text object grabbing the whole buffer
     " ie is a text object grabbing all but trailing and leading empty lines
     Bundle 'kana/vim-textobj-entire'
@@ -91,6 +92,16 @@
     Bundle 'kana/vim-textobj-user'
     " a/ and i/ are text objects for the last search pattern
     Bundle 'kana/vim-textobj-lastpat'
+
+    " Language plugins
+    " ML and SML
+    Bundle 'chilicuil/vim-sml-coursera'
+    " Pig
+    Bundle 'motus/pig.vim'
+    " Elm
+    Bundle 'lambdatoast/elm.vim'
+    "Haskell mode
+    "Bundle 'lukerandall/haskellmode-vim'
 " }
 
 " Backup, Swap, and View Files {
@@ -154,9 +165,9 @@
     set ruler "Show %of file remaining in statusbar
 
     " Highlight column 80 to help with line wrapping
-    if exists('+colorcolumn')
-        set colorcolumn=80
-    endif
+    " if exists('+colorcolumn')
+    "     set colorcolumn=80
+    " endif
 
     " restore cursor position when reopening files
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
@@ -244,6 +255,8 @@
     au BufRead,BufNewFile *.md setlocal ft=markdown
     au BufNewFile,BufRead *.pde setlocal ft=java
     au BufNewFile,BufRead *.elm setlocal ft=haskell
+    " au BufRead *.hs compiler ghc 
+    " :let g:haddock_browser="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
     "Recognize 007 as decimal not octal.
     set nrformats=

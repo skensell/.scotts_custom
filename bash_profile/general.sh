@@ -50,3 +50,5 @@ export HISTCONTROL=ignoredups
 
 # To be able to remap C-s in vim I need to disable the start/stop option
 stty -ixon
+
+export EDITOR=vim

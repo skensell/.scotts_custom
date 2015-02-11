@@ -22,6 +22,8 @@ alias glh="gl | head"
 alias gspp="git stash; git pull --rebase; git stash pop"
 alias grh='git reset --hard' # discards all changes in working dir
 alias gdh='git diff HEAD~1 HEAD'
+alias gsh="git stash"
+alias gsp="git stash pop"
 
 current_git_branch() {
     git branch | grep \* | awk '{ print $2 }'
@@ -73,6 +75,14 @@ gch() {
             mv "/tmp/last_git_branch_used."{temp,txt}
         fi
     fi
+    echo
+    echo "GIT STATUS"
+    echo "=========="
+    gs
+    echo
+    echo "GIT LOG"
+    echo "======="
+    glh
 }
 
 
