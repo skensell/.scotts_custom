@@ -1,0 +1,17 @@
+
+die(){ echo "ERROR: setup failed. $@" >&2; exit 1; }
+check_command(){ which $1 >/dev/null || die $2; }
+
+THIS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "${THIS_DIR}"
+
+#Prints every line
+bash -x script
+set -x
+in the script.
+
+# The == comparison operator behaves differently within a double-brackets  test than within single brackets.
+# 
+# [[ $a == z* ]]   # True if $a starts with a "z" (wildcard matching).
+# [[ $a == "z*" ]] # True if $a is equal to z* (literal matching).
+

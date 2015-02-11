@@ -1,0 +1,48 @@
+
+mysql.server start;
+	starts a mysql instance on macosx (and creates the socket)
+mysql.server stop;
+	stops it
+
+
+mysql -S /opt/mysql/phabricator/var/mysqld.sock
+	this is the one for mac
+mysql -S /private/tmp/mysql.sock -uroot
+	and this is what i need for root access within mysql
+
+mysql -uroot -S private/tmp/mysql.sock
+mysql -umonkeys -S private/tmp/mysql.sock -p
+	connects to a mysql instance through a socket
+	Note: there are machines/servers run mysql instances which contain databases
+
+find / -name *.sock 2>/dev/null
+	finds the mysql sock on a random unix machine
+	On my machine I will always just have one instance running at
+	/private/tmp/mysql.sock
+	and will probably never need to type mysql.server start again
+
+show databases;
+	shows all databases
+use DATABASE;
+	where DATABASE is a placeholder for the name of the database
+show tables;
+	shows all tables of the database
+describe TABLENAME;
+	shows the schema of a table (tables correspond to models in Django)
+drop database contacs_sync;
+	removes the misnamed database
+
+select current_user();
+	tells who and where i am
+select user();
+	probably the same
+	
+create user 'monkeys'@'localhost' identified by 'monkeys';
+	creates a user in mysql which has permission on what he can access
+	i should just use the same name as the database name
+create database monkeys;
+	creates the database
+grant all on monkeys.* to 'monkeys'@'localhost';
+grant all on monkeys.* to 'monkeys'@'127.0.0.1';
+	
+	at this point i have a working database 'monkeys' which i can easily refer to in any django app
