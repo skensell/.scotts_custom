@@ -1,4 +1,3 @@
-PATH="~/Library/Haskell/bin:/Library/Haskell/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH=/$HOME/anaconda/bin:$PATH
 PATH=:$HOME/bin:$PATH
@@ -50,5 +49,8 @@ export HISTCONTROL=ignoredups
 
 # To be able to remap C-s in vim I need to disable the start/stop option
 stty -ixon
+
+# Turn on vim-like command line editing
+set -o vi
 
 export EDITOR=vim

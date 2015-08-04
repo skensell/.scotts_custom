@@ -62,7 +62,7 @@
 " }
 
 " Vundle Plugin Manager {
-    "filetype on " must set to on first for MacOSX
+    filetype on " must set to on first for MacOSX
     filetype off " Vundle might need this
     set rtp+=~/.vim/bundle/vundle/
     call vundle#rc()
