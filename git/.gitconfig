@@ -1,0 +1,13 @@
+[pull]
+	rebase = true
+[user]
+	name = Scott Kensell
+	email = scott.kensell@prezi.com
+[core]
+	editor = vim
+[color]
+	ui = true
+[push]
+	default = simple
+[merge]
+	tool = vimdiff
