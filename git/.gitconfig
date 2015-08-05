@@ -2,12 +2,12 @@
 	rebase = true
 [user]
 	name = Scott Kensell
-	email = scott.kensell@prezi.com
+	email = skensell@gmail.com
 [core]
 	editor = vim
 [color]
 	ui = true
 [push]
-	default = simple
+	default = upstream
 [merge]
 	tool = vimdiff
