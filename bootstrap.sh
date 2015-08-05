@@ -22,6 +22,7 @@ fi
 link_or_warn "$HOME/.scotts_custom/bash_profile/.bash_profile"
 link_or_warn "$HOME/.scotts_custom/bin"
 link_or_warn "$HOME/.scotts_custom/vim/.vimrc"
+link_or_warn "$HOME/.scotts_custom/tmux/.tmux.conf"
 
 if [ ! -e "$HOME/.vim/bundle/vundle" ]; then
     git clone git://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
