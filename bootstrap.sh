@@ -11,11 +11,9 @@ function link_or_warn(){
     fi
 }
 
-cd "$HOME"
-if [ -d '.scotts_custom' ]; then
-    echo ".scotts_custom exists already, skipping cloning stage."
-else
-    git clone git@github.com:skensell/.scotts_custom.git 
+if [ ! -d "$HOME/.scotts_custom" ]; then
+    echo >&2 "ERROR: $HOME/.scotts_custom does not exist"
+    exit 1
 fi
     
 
