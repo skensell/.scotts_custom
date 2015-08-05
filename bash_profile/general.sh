@@ -3,7 +3,7 @@ PATH=:$HOME/bin:$PATH
 export PATH
 
 export CLICOLOR=1
-if [ "$(uname -s)" == "Darwin"]; then # on Mac
+if [ "$(uname -s)" == "Darwin" ]; then # on Mac
     export LSCOLORS=ExFxBxDxCxegedabagacad
 else # on Linux prob
     export LS_COLORS='di=1;34:fi=0:ln=1;35:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=1;32:*.rpm=90'

@@ -1,5 +1,5 @@
 
-if [ "$(uname -s)" == "Darwin"]; then # on Mac
+if [ "$(uname -s)" == "Darwin" ]; then # on Mac
     alias ls='ls -GFh'
 else # on Linux prob
     alias ls='ls -Fh --color=auto'
