@@ -1,4 +1,10 @@
-alias ls='ls -GFh'
+
+if [ "$(uname -s)" == "Darwin"]; then # on Mac
+    alias ls='ls -GFh'
+else # on Linux prob
+    alias ls='ls -Fh --color=auto'
+fi
+
 alias g='grep -Ini'
 alias v='vim'
 

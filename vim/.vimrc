@@ -95,11 +95,11 @@
 
     " Language plugins
     " ML and SML
-    Bundle 'chilicuil/vim-sml-coursera'
+    " Bundle 'chilicuil/vim-sml-coursera'
     " Pig
-    Bundle 'motus/pig.vim'
+    " Bundle 'motus/pig.vim'
     " Elm
-    Bundle 'lambdatoast/elm.vim'
+    " Bundle 'lambdatoast/elm.vim'
     "Haskell mode
     "Bundle 'lukerandall/haskellmode-vim'
 " }
