@@ -38,7 +38,7 @@ BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
 
-if [[ "$(hostname -s)" == Scotts-MBP* ]]; then #local
+if [[ "$(hostname -s)" == Scott* ]]; then #local
     export PS1="${FBLKBOLD}ː \w ${RS}\$(~/bin/vcprompt -f '[${FCYN}%n${RS}:${FGRN}%b${RS}:${FCYN}%h%m%a%u${RS}] ')${FBLKBOLD}ː ${RS}"
 else #remote
     export PS1="${FGRNBOLD}\u@\h${RS} ${FBLKBOLD}\w${RS} \$(~/bin/vcprompt -f '[${FCYN}%n${RS}:${FGRN}%b${RS}:${FCYN}%h%m%a%u${RS}] ')${FBLKBOLD}ː ${RS}"
