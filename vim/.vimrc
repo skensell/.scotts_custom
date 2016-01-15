@@ -83,6 +83,7 @@
     Bundle 'sjl/gundo.vim'
     Bundle 'LargeFile'
     Bundle 'Lokaltog/vim-powerline'
+    Bundle 'vim-ruby/vim-ruby'
     
     " Text objects
     " ae is a text object grabbing the whole buffer
@@ -133,11 +134,15 @@
     let perl_extended_vars=1 " highlight Perl vars inside strings
     filetype plugin indent on " load filetype plugins/indent settings
     set fileformats=unix,mac,dos " support fileformats in this order
+
+
+    au FileType ruby setl sw=2 sts=2 et "sw is short for softwidth, sts is short for softtabstop, et is short for expandtab, setl is short for setlocal, and au is short for autocmd
     set expandtab " Use spaces for indenting
     set shiftwidth=4 " Number of spaces per indent
     set softtabstop=4 " Number of spaces per tab
     set tabstop=4 " Number of spaces in actual tabs
     set autoindent " When pressing Enter, cursor gets indented to same column as previous line
+
     "set foldenable " auto fold code
     set foldmarker={,} " fold C style blocks
     set foldmethod=indent " fold using indentions by default

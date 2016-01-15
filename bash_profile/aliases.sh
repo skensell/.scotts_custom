@@ -30,6 +30,7 @@ alias grh='git reset --hard' # discards all changes in working dir
 alias gdh='git diff HEAD~1 HEAD'
 alias gsh="git stash"
 alias gsp="git stash pop"
+alias gds="git diff --staged"
 alias github="open \`git config --get remote.origin.url | sed -E 's/^.*github\.com[:\/](.*)\.git$/https:\/\/github.com\/\1/'\`"
 
 current_git_branch() {
