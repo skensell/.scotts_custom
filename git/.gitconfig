@@ -5,9 +5,12 @@
 	email = skensell@gmail.com
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore_global
 [color]
 	ui = true
 [push]
 	default = upstream
 [merge]
 	tool = vimdiff
+[http]
+	cookiefile = /Users/skensell/.gitcookies

@@ -54,3 +54,8 @@ stty -ixon
 set -o vi
 
 export EDITOR=vim
+
+
+# Ruby version manager
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+

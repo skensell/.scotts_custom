@@ -41,7 +41,7 @@ current_git_branch() {
 gd() {
     if [ -z "$1" ]; then git diff
     elif [ -f "$1" ]; then git diff "$1"
-    elif [ "$1" -gt 0 ]; then git diff `git ls-files --modified | sed -n $1p`
+    elif [ "$1" -gt 0 ]; then git diff "$(git ls-files --modified | sed -n $1p)"
     fi
 }
 
@@ -53,7 +53,7 @@ gdf() {
 # ga 1 adds the first modified file
 ga() {
     if [ -z "$1" ] || [ -e "$1" ] || [[ "$1" == -*  ]]; then git add "$@"
-    elif [ "$1" -gt 0 ]; then git add `git ls-files --modified | sed -n $1p`
+    elif [ "$1" -gt 0 ]; then git add  "$(git ls-files --modified | sed -n $1p)" 
     fi
 }
 # to "unadd" a change, use ga -i and then revert
