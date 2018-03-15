@@ -23,7 +23,7 @@ alias GS='gs'
 alias gc='git commit'
 alias gca='git commit -a'
 alias gcaa='git commit -a --amend'
-alias gl="git log --graph --pretty=format:'%Cred%H%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gl="git log --graph --pretty=format:'%Cred%H%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --color=always"
 alias glh="gl | head"
 alias gspp="git stash; git pull --rebase; git stash pop"
 alias grh='git reset --hard' # discards all changes in working dir
