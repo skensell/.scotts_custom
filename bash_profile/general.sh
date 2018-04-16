@@ -38,7 +38,7 @@ BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
 
-if [[ "$(hostname -s)" == Scott* ]]; then #local
+if [[ "$(hostname -s)" == Scott* ]] || [[ "$(hostname -s)" == "LM-PDX-11011213" ]]; then #local
     export PS1="${FBLKBOLD}ː \w ${RS}\$(~/bin/vcprompt -f '[${FCYN}%n${RS}:${FGRN}%b${RS}:${FCYN}%h%m%a%u${RS}] ')${FBLKBOLD}ː ${RS}"
 else #remote
     export PS1="${FGRNBOLD}\u@\h${RS} ${FBLKBOLD}\w${RS} \$(~/bin/vcprompt -f '[${FCYN}%n${RS}:${FGRN}%b${RS}:${FCYN}%h%m%a%u${RS}] ')${FBLKBOLD}ː ${RS}"
@@ -51,11 +51,13 @@ export HISTCONTROL=ignoredups
 stty -ixon
 
 # Turn on vim-like command line editing
-set -o vi
+# set -o vi
 
 export EDITOR=vim
 
 
 # Ruby version manager
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
