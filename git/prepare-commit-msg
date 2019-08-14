@@ -1,0 +1,22 @@
+#!/bin/bash
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+if [ "${COMMIT_SOURCE}" != "message" ]; then
+    # only edit the commit message when invoked with -m
+    # this avoids modifying commit message for merge commits and amends
+    # see https://git-scm.com/docs/githooks
+    exit 0
+fi
+
+BRANCH_NAME=$(git symbolic-ref --short HEAD)
+TICKET_REGEX='\([a-zA-Z][a-zA-Z]*\-[[:digit:]][[:digit:]]*\)'
+
+TICKET=$(git symbolic-ref --short HEAD | xargs -J % basename % | grep "${TICKET_REGEX}" | sed 's/^'"${TICKET_REGEX}"'.*/\1/')
+
+if [ -n "${TICKET}" ]; then
+  sed -i.bak -e "1s/^/[$TICKET] /" $COMMIT_MSG_FILE
+fi
+
